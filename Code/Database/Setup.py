@@ -1,4 +1,3 @@
-import Tables
 from Tables import *
 import datetime
 from datetime import date
@@ -34,6 +33,8 @@ housingU = User(firstName='Nick', lastName='Burris', email='nburris@pike.com', p
 housingU.save()
 spurr = User(firstName='Matt', lastName='Spurr', email='mspurr@pike.com', passHash='password', passSalt='salt')
 spurr.save()
+brent = User(firstName='Brent', lastName='Austgen', email='baustgen@pike.com', passHash='password', passSalt='salt')
+brent.save()
 
 # Quarter
 winter = Quarter(start=date(2013, 11, 17), end=date(2014, 2, 25))
@@ -81,4 +82,6 @@ groundsC.save()
 housingC = Chairmen(user=housingU, department=housing)
 housingC.save()
 housingCapExC = Chairmen(user=spurr, department=housingCapEx)
+housingCapExC.save()
+housingCapExC = Chairmen(user=brent, department=housingCapEx)
 housingCapExC.save()
